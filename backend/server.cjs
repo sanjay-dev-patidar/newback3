@@ -111,7 +111,6 @@ app.get('/api/:collection', async (req, res) => {
   }
 });
 
-// Route for submitting feedback
 app.post('/api/submit-feedback', async (req, res) => {
   try {
     const { name, email, feedback } = req.body;
@@ -129,8 +128,6 @@ app.post('/api/submit-feedback', async (req, res) => {
     res.status(500).json({ error: 'Error submitting feedback' });
   }
 });
-
-
 
 // Default route
 app.get('/', (req, res) => {
